@@ -17,8 +17,7 @@ def solve(filepath):
     """Solve 22nd Euler problem."""
     ans = 0
     for index, name in enumerate(sorted(extract(filepath))):
-        ans += value(name) * index
+        ans += value(name) * (index+1)
     return ans
-#    return sum(value(name) * index for index, name in enumerate(sorted(extract(filepath))))
 
 print("La solution au problème Euler 22 est", solve('p022_names.txt'))
